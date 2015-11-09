@@ -1,0 +1,19 @@
+{
+  "name": "SiteCreator",
+  "dependencies": {
+    "angular-restmod": "~1.1.7",
+    "foundation": "~5.5.1",
+    "spinkit": "~1.0.1",
+    "dropzone": "~4.0.1",
+    "jquery-uploadfile": "~3.1.10",
+    "jquery-file-upload": "~9.9.3",
+    "ng-fab-form": "~1.1.12",
+    "angular-route": "~1.3.14",
+    "hallo": "~1.1.1",
+    "textAngular": "~1.3.7",
+    "angularjs-file-upload": "~3.1.2"
+  },
+  "resolutions": {
+    "angular": "1.3.14"
+  }
+}

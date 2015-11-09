@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+
+    <div class="panel panel-default"  >
+        <div class="panel-body" style="background-color: #2C3E50">
+            <div alert class="alert alert-info " msge="result" ng-show="showNoItemsAlert"></div>
+            <div class="row">
+                <div class="col-sm-5 col-md-5">
+
+                    <h4 ng-if="resume">Versión:
+                        <span ng-bind="resume.name"></span>
+                        <a href="" ng-click="showResumeEditForm(resume)"><span data-icon="&#xe605"></span></a>
+                        <a href="" ng-click="deleteResume(resume)"><span data-icon="&#xe6ac"></span></a>
+                    </h4>
+                    <h4 ng-if="resume">Fecha de creación: <br><span ng-bind="resume.createdAt"></span></h4>
+                    <!--h4 ng-if="resume">Biografía relacionada:<span ng-bind="resume.biography.title"></span></h4>
+                    <!--h4 ng-if="resume.active">Url:<a href="{{resume.url}}" ng-bind="resume.url"></a></h4-->
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <h4 ng-if="resume">Estado:<br>
+                        <span ng-if="resume.active==1" class="published-resume">Publicado</span>
+                        <span ng-if="resume.active==0" class="unpublished-resume">No publicado</span><br>
+                        <span ng-if="resume.default==1" class="default-resume">predeterminado</span>
+                        <span ng-if="resume.default==0" class="nodefault-resume">No predeterminado</span>
+                    </h4>
+                    <button  class="btn btn-info reset-white-space" ng-click = "publication(resume,true)"
+                            ng-if="resume.active==0">
+                       Publicar
+                    </button>
+
+                    <button  class="btn btn-warning reset-white-space" ng-click = "publication(resume,false)"
+                            ng-if="resume.active==1">
+                       Quitar publicación
+                    </button>
+
+
+
+
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <button ng-click="newResume()" class="btn btn-success reset-white-space" data-icon="&#xe70a">Nuevo Résumé</button><br>
+                    <br>
+                    <button ng-if="resume" ng-click="cloneResume(resume)" class="btn btn-default reset-white-space" data-icon="&#xe62c">Clonar Résumé</button>
+                    <br><br>
+                    <button ng-if="resume.default==0 && !resume.theresaunique" class="btn btn-default reset-white-space" ng-click = "setDefault(resume,true)" ng-if="resume">
+                        Predeterminar
+                    </button>
+
+
+
+                </div>
+
+            </div>
+            <br>
+            <div alert class="alert alert-{{result.result}}" msge="result.message" ng-show="ShowResultAlert"></div>
+            <div  res="resume"  resume-edit-form ng-show="showedEditResumeForm" close="closeAfterUpdate(data)"></div>
+            <div resume-form ng-show="showedResumeForm" close="closeAfterCreate(data)" ></div>
+
+</div>
+</div>
+</div>
+</div>

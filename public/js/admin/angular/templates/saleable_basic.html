@@ -1,0 +1,99 @@
+
+<div class="wizard-details-container">
+<hr>
+    <form  class="wizard-form"  role="form"  id="saleableBasicForm" name="saleableBasicForm" ng-submit="updateSaleable()"  >
+        <h2>
+            <span ng-if="!saleable.id" class="wizard-title">Información básica </span>
+            <span ng-if="saleable.id" class="wizard-title">Editando información básica</span>
+        </h2>
+
+        <div alert class="alert alert-danger" msge="result" ng-show="ShowServerErrors"></div>
+        <div alert class="alert alert-{{result.result}} message" msge="result.message" ng-show="ShowResultAlert">
+
+        </div>
+        <ul class="list-group" ng-repeat="(key, value) in errors">
+            <li class="list-group-item list-group-item-danger"> {{value[0]}} </li>
+        </ul>
+
+        <div ng-class="{'alert alert-success': has_success}" ng-bind="success_msg"></div>
+        <div class="row">
+            <div class="form-group col-sm-2" ng-class="{'has-error':errorBody}">
+                <label class="control-label" for="product">Producto</label>
+                <span>
+                    <input type="radio" name="type" value="0" id="product" ng-model="saleable.type" >
+                </span>
+
+            </div>
+            <div class="form-group col-sm-2" ng-class="{'has-error':errorBody}">
+                <label class="control-label" for="service">Servicio</label>
+                <span>
+                    <input type="radio" name="type" value="1" id="service" ng-model="saleable.type" >
+                </span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6" ng-class="{'has-error':errorBody}">
+                <label class="control-label" for="title">Título</label><br>
+                <div >
+                    <input class="form-control" type="text" name="title" id="title" ng-model="saleable.title" required >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12" ng-class="{'has-error':errorBody}">
+                <label class="control-label" for="description">Descripción</label><br>
+
+                    <text-angular ng-model="saleable.description" id="description" name="description" required></text-angular>
+
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="form-group col-sm-12">
+                <label class="control-label" for="featured">Establecer como destacado</label><br>
+                <div >
+                    <input  type="checkbox" id="featured" ng-checked="saleable.featured"
+                            ng-model="saleable.isfeatured"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-if="saleable.categories.length!=0">
+                <div class="form-group col-sm-12">
+                    <label class="control-label" for="featured">Categorías</label><br>
+                    <div >
+                        <select id="resume-drop-list"  multiple ng-multiple="true"  ng-model="saleable.categories"
+                                ng-options="key as value for (key, value) in catoptions ">
+
+                        </select>
+                    </div>
+                </div>
+        </div>
+        <!--div class="row">
+            <div class="form-group col-sm-2" ng-class="{'has-error':errorBody}">
+                <label class="control-label" for="simple">Despliegue simple</label>
+                <span>
+                    <input type="radio" name="type" value="0" id="simple" ng-model="saleable.detailed" >
+                </span>
+
+            </div>
+            <div class="form-group col-sm-2" ng-class="{'has-error':errorBody}">
+                <label class="control-label" for="full">Despliegue completo</label>
+                <span>
+                    <input type="radio" name="type" value="1" id="full" ng-model="saleable.type" >
+                </span>
+            </div>
+
+        </div-->
+
+
+        <div class="row">
+            <div class="form-group col-sm-12" >
+                <div class="col-sm-4"><button type="submit" class="btn btn-primary"  >Guardar</button></div>
+            </div>
+        </div>
+    </form>
+    <hr>
+</div>
+
