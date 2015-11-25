@@ -32,8 +32,8 @@ class ProfileController extends Controller {
     {
         $this->middleware('auth');
         $this->profileRepository = $profileRepository;
-        $this->x_image_size = logo_size()[x];
-        $this->y_image_size = logo_size()[y];
+        $this->x_image_size = logo_size()['x'];
+        $this->y_image_size = logo_size()['y'];
     }
 
 

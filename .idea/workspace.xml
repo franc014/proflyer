@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="11e7d2de-0b19-4507-aa59-913a2d4c64b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BiographyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BiographyController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/directory_helper.php" afterPath="$PROJECT_DIR$/app/directory_helper.php" />
     </list>
     <ignored path="sitecreator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +52,8 @@
       <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.1749597">
-              <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.75120384">
+              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -334,12 +332,6 @@
       <created>1423072247100</created>
       <option name="number" value="Default" />
       <updated>1423072247100</updated>
-    </task>
-    <task id="LOCAL-00094" summary="home image">
-      <created>1439591652362</created>
-      <option name="number" value="00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1439591652362</updated>
     </task>
     <task id="LOCAL-00095" summary="home image">
       <created>1439591743369</created>
@@ -629,7 +621,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448482485785</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="logo directory organization">
+      <created>1448485499210</created>
+      <option name="number" value="00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1448485499210</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -657,7 +655,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.270412" sideWeight="0.103896104" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30671936" sideWeight="0.8961039" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30671936" sideWeight="0.8961039" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30101302" sideWeight="0.49965963" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13603473" sideWeight="0.50034034" order="9" side_tool="true" content_ui="tabs" />
@@ -693,7 +691,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="project image model git error" />
     <MESSAGE value="experience and education date ordering" />
     <MESSAGE value="client portfolio and resume" />
     <MESSAGE value="resume small devices" />
@@ -718,7 +715,8 @@
     <MESSAGE value=" first remote push" />
     <MESSAGE value="removing some files" />
     <MESSAGE value="-sass inclusion&#10;-file uploadingm better organisation &#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="-sass inclusion&#10;-file uploadingm better organisation &#10;" />
+    <MESSAGE value="logo directory organization" />
+    <option name="LAST_COMMIT_MESSAGE" value="logo directory organization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1101,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.1749597">
-          <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.75120384">
+          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding />
         </state>
       </provider>
