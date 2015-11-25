@@ -2,13 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>profesional.xyz</title>
-	<link rel="stylesheet" href="/css/admin/bootstrap.min.css"/>
+	<title>Proflyer CMS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/landing/styles.css" />
 	<link rel="stylesheet" href="/js/landing/nivoslider/nivo-slider.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="/js/landing/nivoslider/themes/default/default.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="/js/landing/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-
 </head>
 
 

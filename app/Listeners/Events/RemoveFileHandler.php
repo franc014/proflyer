@@ -13,11 +13,11 @@ class RemoveFileHandler {
      */
     private $fileSystem;
 
-    /**
-     * Create the event handler.
-     *
-     * @param Factory $fileSystem
-     */
+	/**
+	 * Create the event handler.
+	 *
+	 * @param Factory|Filesystem $fileSystem
+	 */
 	public function __construct(Filesystem $fileSystem)
 	{
 		//
@@ -32,6 +32,7 @@ class RemoveFileHandler {
 	 */
 	public function handle(RemoveFile $event)
 	{
+		//dd($event);
 		$this->fileSystem->delete($event->path);
 	}
 

@@ -1,9 +1,10 @@
 <?php
 
+$env_prefix = ($app->environment()=='local') ? '/test':'/production';
 return [
     "cloudfullpath"=>"https://s3-sa-east-1.amazonaws.com/profesionalxyz",
     "user_photos"=>"https://s3-sa-east-1.amazonaws.com/profesionalxyz",
-    "default_gravatar"=>"https://s3-sa-east-1.amazonaws.com/profesionalxyz/members/logos/default_member.png",
+
     "prefix"=>[
         "photo_bio"=>"phBio-",
         "logo"=>"logo-",
@@ -13,9 +14,9 @@ return [
         "home_image"=>"homeimage-"
     ],
     "upload"=>[
-        "photo_bio"=>"/members/bio/",
-        "logo"=>"/members/logos/",
-        "detail_icon"=>"/members/saleables/details/icons/",
+        "photo_bio"=>$env_prefix."/members/bio/",
+        "logo"=>$env_prefix."/members/logos/",
+        "detail_icon"=>$env_prefix."/members/saleables/details/icons/",
         "project_image"=>"/members/projects/project_image/",
         "project_gallery_image"=>"/members/projects/project_gallery_image/",
         "home_image"=>"/members/home/home_image/"
@@ -28,7 +29,7 @@ return [
         "home_image"=>["x"=>1300,"y"=>850]
     ],
     "default_images"=>[
-        "characteristic_default_icon"=>"/members/saleables/details/icons/characteristic_default_icon3.png",
-        "benefit_default_icon"=>"/members/saleables/details/icons/benefit_default_icon.png"
+        "characteristic_default_icon"=>$env_prefix."/members/saleables/details/icons/characteristic_default_icon3.png",
+        "benefit_default_icon"=>$env_prefix."/members/saleables/details/icons/benefit_default_icon.png"
     ]
 ];

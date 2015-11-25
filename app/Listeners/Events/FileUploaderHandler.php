@@ -36,12 +36,14 @@ class FileUploaderHandler {
 	public function handle(FileUploader $event)
 	{
 		$fileContents = $event->fileContents;
+
 		$fileName = $event->fileName;
         try{
             //TODO: pass file visibility, for now all public
-		    $this->filesystem->put($fileName,$fileContents,'public');
+		    $this->filesystem->put($fileName,$fileContents->stream()->__toString(),'public');
             //return true;
         }catch (Exception $e){
+			dd($e->getMessage());
             //return Response::json($e->getMessage(),404);
             return $e->getMessage();
         }

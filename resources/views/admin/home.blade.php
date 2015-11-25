@@ -1,32 +1,24 @@
 @extends('layouts.admin.master')
 @section('page_title')
-Home
+    Home
 @stop
 @section('main_content')
-<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" ng-controller="HomeCtrl">
-    <!--div class="row">
-        <ol class="breadcrumb">
-            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-            <li class="active">Dashboard</li>
-        </ol>
-    </div--><!--/.row-->
+    <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2" ng-controller="HomeCtrl">
 
-    <div class="row">
-        <div class="col-md-8 col-lg-8" >
-            @include('admin.partials._body')
+
+        <div class="row">
+            <div class="col-md-8 col-md-8">
+                @include('admin.partials._body')
+            </div>
+            <div class="col-md-4 col-md-4 widgets-container">
+                <div content-selector class="content-selector"></div>
+
+            </div>
         </div>
 
-    </div>
-    <div class="col-md-4 col-lg-4">
-        <div content-selector></div>
-    </div>
-    <!--/.row-->
+        <!--/.row-->
 
-    <div class="row">
-        <div class="col-lg-12">
 
-        </div>
-    </div>
+    </div>    <!--/.main-->
 
-</div>	<!--/.main-->
 @stop

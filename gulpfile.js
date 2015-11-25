@@ -12,38 +12,33 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+    /*****************STYLES********************/
+    mix.sass("app.scss","resources/assets/css");
+    mix.styles([
+        'app.css',
+        'jquery.fileupload.css',
+        'nganimations.css',
+        'textAngular.css',
+        'validations.css',
+        'spinners.css'
+    ],'public/css/admin/app.css')
 
-    mix.sass("genesis.scss","public/css/themes/genesis");
-    //mix.sass("/themes/iptelecom/default.scss","public/css/themes/iptelecom");
-    //mix.scripts();
-    //mix.less('app.less');
+    /*****************SCRIPTS********************/
+    //mix.browserify('adminapp.js','public/js/admin/app.js');
+    /*mix.scripts([
+        '/admin/external/jquery-1.11.1.min.js',
+        '/admin/external/jquery-ui.min.js',
+        '/admin/external/bootstrap.min.js',
+        '/admin/external/navresponsive.js',
+        '/admin/external/jquery.ui.widget.js',
+        '/admin/external/jquery.fileupload.js',
+    ],'public/js/admin/bundle.js');*/
 
-    /***********browserify admin************/
-    //mix.browserify('adminapp.js');
-    /***************************************/
 
-    /***********browserify site************/
-    /*mix.browserify("siteapp.js", {
-        debug: true,
-        insertGlobals: true,
-        output: "public/js/themes/genesis",
-        rename: "sbundle.js"
-    });*/
-    /***********Sass / Theme**********************/
 
-    /*********************************************/
-    /*mix.browserify("usersiteapp.js", {
-        debug: true,
-        insertGlobals: true,
-        //transform: ["debowerify"],
-        output: "public/js",
-        rename: "ubundle.js"
-    });*/
-    //mix.stylesIn('resources/assets/vendor/spinkit/scss');
-    //mix.sass('resources/assets/vendor/spinkit/scss/_variables.scss','resources/assets/vendor/spinkit/scss/_variables.css');
-    //mix.sass('resources/assets/sass/mods.scss','public/css/admin');
-    //mix.sass('resources/assets/vendor/spinkit/scss');
-    //mix.copy('resources/assets/js/admin/templates', 'public/js/admin/angular/templates');
-    //mix.copy('vendor/packages', 'resources/assets/vendor');
+
+
+
+
 
 });

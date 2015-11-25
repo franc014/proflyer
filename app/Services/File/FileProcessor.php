@@ -76,6 +76,7 @@ class FileProcessor {
         if(!empty($this->typeOfTransformations)) {
             foreach ($this->typeOfTransformations as $typeOfTransformation) {
                 $transformedFile = $this->applyFilter($typeOfTransformation);
+                //dd($transformedFile);
                 $this->setTransformableFile($transformedFile);
             }
             $this->upload($transformedFile->file());

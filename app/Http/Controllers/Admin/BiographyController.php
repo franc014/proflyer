@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Response;
+use League\Flysystem\Exception;
 
 
 class BiographyController extends Controller {
@@ -41,8 +42,8 @@ class BiographyController extends Controller {
     {
         $this->middleware('auth');
         $this->profileRepository = $profileRepository;
-        $this->x_image_size = Config::get('directories.imagesizes.photo_bio.x');
-        $this->y_image_size = Config::get('directories.imagesizes.photo_bio.y');
+        $this->x_image_size = bio_photo_size()['x'];
+        $this->y_image_size = bio_photo_size()['y'];
         $this->biographyRepository = $biographyRepository;
         $this->auth = $auth;
     }
@@ -155,9 +156,11 @@ class BiographyController extends Controller {
      * @param Filesystem $fileSystem
      * @return mixed
      */
-    public function uploadPhoto(UploadBiographyPhotoRequest $request, Filesystem $fileSystem){
-        //$uploadedFile = Input::file("photo");//$request->only(["photo"]);
+    public function uploadPhoto(UploadBiographyPhotoRequest $request,
+                                Filesystem $fileSystem){
+
         $uploadedFile = $request->file("photo");
+
         $file = new FileUploaded($uploadedFile);
 
         $resizing = new ImageResizer($this->x_image_size,$this->y_image_size);
@@ -166,8 +169,8 @@ class BiographyController extends Controller {
         $userId = Auth::user()->id;
         $profile = Auth::user()->profile;
 
-        $prefixPhotoBio = Config::get('directories.prefix.photo_bio').$userId;
-        $relativePath = Config::get('directories.upload.photo_bio');
+        $prefixPhotoBio = bio_photo_prefix().$userId;
+        $relativePath = bio_photo_path();
         $extension = 'png';
 
         $pathChanger = new FilePathChanger($relativePath,$prefixPhotoBio,$extension);
@@ -178,6 +181,7 @@ class BiographyController extends Controller {
         $processor = new FileProcessor($fileProperties['path'],$transformation,$file,$dbStore);
         $imageCreated = $processor->process();
         return $this->getImage($fileSystem,$imageCreated);
+
     }
 
     /**
@@ -191,8 +195,9 @@ class BiographyController extends Controller {
             try {
                 return $this->getImage($fileSystem,$photo);
             } catch (\Exception $e) {
-                return Response::make("No se ha encontrado la imagen. Intenta refrescar
-                el browser nuevamente por favor.", 404);
+                /*return Response::make("No se ha encontrado la imagen. Intenta refrescar
+                el browser nuevamente por favor.", 404);*/
+                return $this->getImage($fileSystem,$photo);
             }
         }
         return $this->getDefaultImage($fileSystem);

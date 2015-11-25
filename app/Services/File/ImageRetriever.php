@@ -7,7 +7,9 @@
  */
 
 namespace App\Services\File;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Response;
+use PhpSpec\Exception\Exception;
 
 trait ImageRetriever {
     public $x_image_size;
@@ -21,8 +23,14 @@ trait ImageRetriever {
 
 
     public function getDefaultImage($fileSystem){
-        $imagePath = 'default.png';
-        $defaultFile = $fileSystem->get($imagePath);
+        //dd($fileSystem);
+        $imagePath = default_image();
+        try{
+            $defaultFile = $fileSystem->get($imagePath);
+        }catch (FileNotFoundException $e){
+            dd($e->getMessage());
+        }
+
         return $this->resource($defaultFile);
     }
 

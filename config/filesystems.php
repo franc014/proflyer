@@ -52,7 +52,7 @@ return [
 			'driver' => 's3',
 			'key'    => 'AKIAJZAD2LK465IR35MQ',
 			'secret' => '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',
-			'region' => '',
+			'region' => 'sa-east-1',
 			'bucket' => 'profesionalxyz',
 		],
 

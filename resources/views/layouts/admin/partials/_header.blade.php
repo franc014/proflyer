@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
 
     <div class="container-fluid">
@@ -9,8 +8,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/admin/home">
-                <img width="25" height="25" src="{{$loggedUser['photo']}}" /> {{$loggedUser['username']}}</a>
+            <div class="navbar-brand">
+            <a  href="/admin/home" >
+                <img  width="25" height="25" src="{{$loggedUser['photo']}}" />
+                {{$loggedUser['username']}}
+            </a>
+            </div>
+
             <ul class="user-menu" >
                 <li class="dropdown pull-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Cuenta <span class="caret"></span></a>

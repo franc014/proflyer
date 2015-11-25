@@ -21,7 +21,7 @@ abstract class DBImageStorage {
             "imageable_id"=>$this->idProfile,
             "imageable_type"=>'App\Profile'
         ];
-        //dd($photoData);
+
         $image = $this->model->where('imageable_id',$this->idProfile)->first();
 
         if($image!==null){
@@ -30,6 +30,7 @@ abstract class DBImageStorage {
             return $image;
         }else {
             $newImage = $this->model->create($imageData);
+
             //$newPhoto->create($photoData);
             return $newImage;
         }

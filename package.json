@@ -2,7 +2,8 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "laravel-elixir": "*",
-    "laravel-elixir-browserify": "^0.8.1"
+    "laravel-elixir-browserify": "^0.8.1",
+    "bootstrap-sass": "^3.0.0"
   },
   "dependencies": {
     "angular-bootstrap-lightbox": "^0.8.0",

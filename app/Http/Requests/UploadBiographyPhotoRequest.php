@@ -22,7 +22,7 @@ class UploadBiographyPhotoRequest extends Request {
 	public function rules()
 	{
 		return [
-			"photo"=>"image | max:51200"
+			"photo"=>"image | max:".bio_photo_file_size()
 		];
 	}
 

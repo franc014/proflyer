@@ -26,8 +26,8 @@ class FileUploader extends Event {
 	 * Create a new event instance.
 	 *
 	 * @param $fileContents
-	 * @param $storage
 	 * @param $fileName
+	 * @internal param $storage
 	 */
 	public function __construct($fileContents, $fileName)
 	{
