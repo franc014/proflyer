@@ -16,9 +16,7 @@ use Illuminate\Auth\Guard;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Response;
-use League\Flysystem\Exception;
 
 
 class BiographyController extends Controller {

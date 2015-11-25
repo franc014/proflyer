@@ -32,8 +32,8 @@ class ProfileController extends Controller {
     {
         $this->middleware('auth');
         $this->profileRepository = $profileRepository;
-        $this->x_image_size = Config::get('directories.imagesizes.logo.x');
-        $this->y_image_size = Config::get('directories.imagesizes.logo.y');
+        $this->x_image_size = logo_size()[x];
+        $this->y_image_size = logo_size()[y];
     }
 
 
@@ -138,8 +138,8 @@ class ProfileController extends Controller {
         $userId = Auth::user()->id;
         $profile = Auth::user()->profile;
 
-        $prefixPhotoBio = Config::get('directories.prefix.logo').$userId;
-        $relativePath = Config::get('directories.upload.logo');
+        $prefixPhotoBio = logo_prefix().$userId;
+        $relativePath = logo_path();
         $extension = 'png';
 
         $pathChanger = new FilePathChanger($relativePath,$prefixPhotoBio,$extension);
